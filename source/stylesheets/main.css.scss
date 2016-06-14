@@ -1,24 +1,37 @@
 @import 'reset';
+@import 'webfonts';
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
-header.index {
+$max-width:31em;
+
+body {
+  font-family:'concourse_t3regular';
+  @include font-feature-settings("ss02");
+}
+
+.container {
   @include outer-container;
+}
+
+header.index {
+  padding:25vh 0;
   color:white;
   background-color:#9a7ee5;
   font-size:1.7em;
+  line-height:1.3em;
 
   ul.mobile {
     display:none;
   }
 
   #intro {
-    @include span-columns(7);
+    @include span-columns(9);
   }
 
   ul.wide {
     @include shift(1);
-    @include span-columns(4);
+    @include span-columns(2);
   }
   
   p {
