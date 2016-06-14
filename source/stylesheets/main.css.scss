@@ -6,7 +6,7 @@
 $max-width:31em;
 
 body {
-  font-family:'concourse_t3regular';
+  font-family:'concourse_t3';
   @include font-feature-settings("ss02");
 }
 
@@ -32,6 +32,7 @@ header.index {
   ul.wide {
     @include shift(1);
     @include span-columns(2);
+    font-style:italic;
   }
   
   p {
