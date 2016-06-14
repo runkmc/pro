@@ -50,3 +50,27 @@ header.index {
     }
   }
 }
+
+section#work {
+  padding:10vh 0;
+  background-color:#64D5e1;
+  ul#iphone-images {
+    // @include span-columns(9);
+    // @include perspective(1500px);
+    // @include transform-style(preserve-3d);
+
+    li {
+      display:inline-block;
+      margin:0 -4em;
+    }
+
+    img {
+      // @include transform(rotateY(42deg));
+      // transition:transform 0.5s;
+      width:15em;
+      // &:hover {
+      //   @include transform(rotateY(18deg));
+      // }
+    }
+  }
+}
