@@ -3,7 +3,7 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
-$max-width:31em;
+$max-width:66em;
 
 body {
   font-family:'concourse_t3';
@@ -18,18 +18,18 @@ header.index {
   padding:25vh 0;
   color:white;
   background-color:#9a7ee5;
-  font-size:1.7em;
-  line-height:1.3em;
 
   ul.mobile {
     display:none;
   }
 
   #intro {
+    font-size:1.7em;
     @include span-columns(9);
   }
 
   ul.wide {
+    font-size:1.7em;
     @include shift(1);
     @include span-columns(2);
     font-style:italic;
@@ -54,23 +54,38 @@ header.index {
 section#work {
   padding:10vh 0;
   background-color:#64D5e1;
+  color:white;
+
+  #worktext {
+    @include span-columns(5);
+    font-size:1.7em;
+  }
+
   ul#iphone-images {
-    // @include span-columns(9);
-    // @include perspective(1500px);
-    // @include transform-style(preserve-3d);
+    font-size:1.7em;
+    @include span-columns(7);
+    @include perspective(1500px);
+    @include transform-style(preserve-3d);
+    box-sizing:border-box;
 
     li {
       display:inline-block;
-      margin:0 -4em;
-    }
+      width:8em;
+      margin-right:-2em;
 
+      &:not(:first-child) {
+      margin-left:-2em;
+    }
+  }
+    
     img {
-      // @include transform(rotateY(42deg));
-      // transition:transform 0.5s;
-      width:15em;
-      // &:hover {
-      //   @include transform(rotateY(18deg));
-      // }
+      @include transform(rotateY(30deg));
+      transition:transform 0.5s;
+      width:100%;
+      &:hover {
+        @include transform(rotateY(18deg));
+        @include transform(translateZ(100px));
+      }
     }
   }
 }
