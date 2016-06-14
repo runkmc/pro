@@ -1,6 +1,31 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import 'reset';
+@import 'bourbon/bourbon';
+@import 'neat/neat';
 
-.index {
+header.index {
+  @include outer-container;
+  color:white;
   background-color:#9a7ee5;
+
+  ul.mobile {
+    display:none;
+  }
+
+  #intro {
+    @include span-columns(7);
+  }
+
+  ul.wide {
+    @include shift(1);
+    @include span-columns(4);
+  }
+  
+  p {
+    margin-bottom:1em;
+  }
+
+  a {
+    text-decoration:none;
+    color:black;
+  }
 }
