@@ -17,7 +17,7 @@ body {
 header.index {
   padding:25vh 0;
   color:white;
-  background-color:#9a7ee5;
+  background-color:#f4696b;
 
   ul.mobile {
     display:none;
@@ -86,6 +86,38 @@ section#work {
         @include transform(rotateY(18deg));
         @include transform(translateZ(100px));
       }
+    }
+  }
+}
+
+section#recent-posts {
+  background-color:#fd9372;
+  color:white;
+  padding:3vh 0;
+
+
+  & > .container > h1 {
+    font-size:2em;
+    font-weight:bold;
+    @include span-columns(12);
+    padding-bottom:1.4em;
+  }
+
+  .recent-post {
+    @include span-columns(4);
+
+    h1 {
+      font-size:1.7em;
+      padding-bottom:1em;
+    }
+
+    p {
+      font-size:1.2em;
+      padding-bottom:1em;
+    }
+
+    a {
+      font-size:1.2em;
     }
   }
 }
