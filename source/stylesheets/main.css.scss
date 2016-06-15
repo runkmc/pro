@@ -10,6 +10,17 @@ body {
   @include font-feature-settings("ss02");
 }
 
+a {
+  text-decoration:none;
+  color:black;
+  background-size:auto 200%;
+  transition:background-position 0.5s;
+  @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%));
+  &:hover {
+    background-position:100% 100%;
+  }
+}
+
 .container {
   @include outer-container;
 }
@@ -39,16 +50,6 @@ header.index {
     margin-bottom:1em;
   }
 
-  a {
-    text-decoration:none;
-    color:black;
-    background-size:auto 200%;
-    transition:background-position 0.5s;
-    @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%));
-    &:hover {
-      background-position:100% 100%;
-    }
-  }
 }
 
 section#work {
@@ -93,7 +94,7 @@ section#work {
 section#recent-posts {
   background-color:#fd9372;
   color:white;
-  padding:3vh 0;
+  padding:8vh 0;
 
 
   & > .container > h1 {
@@ -105,6 +106,10 @@ section#recent-posts {
 
   .recent-post {
     @include span-columns(4);
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    min-height:200px;
 
     h1 {
       font-size:1.7em;
