@@ -36,11 +36,13 @@ header.index {
 
   #intro {
     font-size:1.7em;
+    line-height:1.35em;
     @include span-columns(9);
   }
 
   ul.wide {
     font-size:1.7em;
+    line-height:1.35em;
     @include shift(1);
     @include span-columns(2);
     font-style:italic;
@@ -99,7 +101,6 @@ section#recent-posts {
 
   & > .container > h1 {
     font-size:2em;
-    font-weight:bold;
     @include span-columns(12);
     padding-bottom:1.4em;
   }
