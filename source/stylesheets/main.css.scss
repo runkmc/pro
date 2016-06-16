@@ -207,16 +207,14 @@ footer {
     }
 
     #post-body {
-      
+      @include shift(2);
+      @include span-columns(8);
       p {
-        @include shift(2);
-        @include span-columns(8);
         line-height:1.45em;
       }
 
       pre {
-        @include shift(1);
-        @include span-columns(10);
+        @include shift(-1);
       }
     }
   }
