@@ -8,6 +8,11 @@ $regular-font-size:1.9em;
 $regular-line-height:1.3em;
 $detail-font-size:1.25em;
 
+$first-color:#f4696b;
+$second-color:#64D5e1;
+$third-color:#fd9372;
+$fourth-color:#f6d860;
+
 body {
   font-family:'concourse_t3';
   @include font-feature-settings("ss02");
@@ -31,7 +36,7 @@ a {
 header.index {
   padding:20vh 0;
   color:white;
-  background-color:#f4696b;
+  background-color:$first-color;
 
   #intro {
     font-size:$regular-font-size;
@@ -47,7 +52,7 @@ header.index {
 
 section#work {
   padding:10vh 0;
-  background-color:#64D5e1;
+  background-color:$second-color;
   color:white;
 
   #worktext {
@@ -86,7 +91,7 @@ section#work {
 }
 
 section#recent-posts {
-  background-color:#fd9372;
+  background-color:$third-color;
   color:white;
   padding:7vh 0;
 
@@ -112,6 +117,7 @@ section#recent-posts {
 
     p {
       font-size:$detail-font-size;
+      line-height:1.2em;
       padding-bottom:1em;
     }
 
@@ -124,7 +130,7 @@ section#recent-posts {
 
 footer {
   padding:8vh 0;
-  background-color:#f6d860;
+  background-color:$fourth-color;
   color:white;
 
   section {
