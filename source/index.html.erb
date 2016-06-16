@@ -26,27 +26,15 @@
 <section id="recent-posts">
   <div class="container">
     <h1>Recent Posts</h1>
+    <% blog.articles[0..2].each do |article| %>
     <div class="recent-post">
       <div class="post-content">
-      <h1>Post About Something</h1>
-      <p>This is the first line or so of the recent post. In it, I talk about a few things including...</p>
+        <h1><%= article.title %></h1>
+        <p><%= strip_tags article.summary %></p>
       </div>
-      <a href="#">Read More -&gt;</a>
+      <%= link_to "Read more -&gt;", article %>
     </div>
-    <div class="recent-post">
-      <div class="post-content">
-      <h1>Post About Something</h1>
-      <p>This is the first line or so of the recent post. In it, I talk about a few things including...</p>
-    </div>
-      <a href="#">Read More -&gt;</a>
-    </div>
-    <div class="recent-post">
-      <div class="post-content">
-      <h1>Post About Something with extra long title</h1>
-      <p>This is the first line or so of the recent post. In it, I talk about a few things including...</p>
-    </div>
-      <a href="#">Read More -&gt;</a>
-    </div>
+  <% end %>
   </div>
 </section>
 <footer>
