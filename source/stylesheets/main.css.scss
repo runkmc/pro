@@ -147,3 +147,13 @@ footer {
   }
 }
 
+#blog-wrapper {
+  background-size:100% 12em;
+  padding-top:6em;
+  background-repeat:no-repeat, repeat-x;
+  @include background-image(linear-gradient(to bottom, $first-color 0%, $first-color 25%, $second-color 25%, $second-color 50%, $third-color 50%, $third-color 75%, $fourth-color 75%, $fourth-color 100%));
+
+  h1:first-child {
+    padding-top:8em;
+  }
+}
