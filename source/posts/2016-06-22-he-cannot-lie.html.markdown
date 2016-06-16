@@ -5,7 +5,7 @@ tags: the island of knights and knaves
 ---
 
 Welcome to the Island of Knights, Knaves, and Sir Mix-a-lot! There are a
-few things you should know about this island:
+few things you should know about this island: READMORE
 
 -    Knights *always* tell the truth
 -    Knaves *always *lie

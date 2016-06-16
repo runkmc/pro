@@ -4,7 +4,7 @@ date: '2016-06-25'
 tags: the young person's guide to vim
 ---
 
-Recently, I read a <a href="http://robots.thoughtbot.com/recursive-macros-in-vim">blog post from thoughtbot about recursive macros in vim</a>. As cool as they look, I almost never use them. I have nothing against recursive macros, but I think it's important to note a few other ways to replay a macro multiple times in vim.
+Recently, I read a <a href="http://robots.thoughtbot.com/recursive-macros-in-vim">blog post from thoughtbot about recursive macros in vim</a>. As cool as they look, I almost never use them. READMORE I have nothing against recursive macros, but I think it's important to note a few other ways to replay a macro multiple times in vim.
 
 Let's look at the problem as presented in the blog post. We have a file that consists of a list of dates like such:
 

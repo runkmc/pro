@@ -4,7 +4,7 @@ date: '2016-06-20'
 tags: the young person's guide to vim
 ---
 
-One of the things that someone new to vim learns early on is that the usage of your keyboard's arrow keys to move around is a bad thing. Many of you are nodding your heads in silent agreement with me. If you are not, I would ask that you consider the benefits of using the hjkl keys instead of arrow keys for movement with regards to hand placement and overall speed. (Also consider the efficiency of moving only one character/line at a time. That's an entirely different post, altogether. (cue <em>Airplane!</em> joke))
+One of the things that someone new to vim learns early on is that the usage of your keyboard's arrow keys to move around is a bad thing. Many of you are nodding your heads in silent agreement with me. READMORE If you are not, I would ask that you consider the benefits of using the hjkl keys instead of arrow keys for movement with regards to hand placement and overall speed. (Also consider the efficiency of moving only one character/line at a time. That's an entirely different post, altogether. (cue <em>Airplane!</em> joke))
 
 One frequent bit of advice given to the beginning vim user is to remap the arrow keys in their .vimrc so that they are disabled, like so;
 
