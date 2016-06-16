@@ -4,6 +4,9 @@
 @import 'neat/neat';
 
 $max-width:66em;
+$regular-font-size:1.9em;
+$regular-line-height:1.3em;
+$detail-font-size:1.25em;
 
 body {
   font-family:'concourse_t3';
@@ -26,28 +29,16 @@ a {
 }
 
 header.index {
-  padding:25vh 0;
+  padding:20vh 0;
   color:white;
   background-color:#f4696b;
 
-  ul.mobile {
-    display:none;
-  }
-
   #intro {
-    font-size:1.7em;
-    line-height:1.35em;
+    font-size:$regular-font-size;
+    line-height:$regular-line-height;
     @include span-columns(9);
   }
 
-  ul.wide {
-    font-size:1.7em;
-    line-height:1.35em;
-    @include shift(1);
-    @include span-columns(2);
-    font-style:italic;
-  }
-  
   p {
     margin-bottom:1em;
   }
@@ -61,11 +52,12 @@ section#work {
 
   #worktext {
     @include span-columns(5);
-    font-size:1.7em;
+    font-size:$regular-font-size;
+    line-height:$regular-line-height;
   }
 
   ul#iphone-images {
-    font-size:1.7em;
+    font-size:$regular-font-size;
     @include span-columns(7);
     @include perspective(1500px);
     @include transform-style(preserve-3d);
@@ -73,7 +65,7 @@ section#work {
 
     li {
       display:inline-block;
-      width:8em;
+      width:7.4em;
       margin-right:-2em;
 
       &:not(:first-child) {
@@ -96,13 +88,13 @@ section#work {
 section#recent-posts {
   background-color:#fd9372;
   color:white;
-  padding:8vh 0;
-
+  padding:7vh 0;
 
   & > .container > h1 {
-    font-size:2em;
+    font-size:$regular-font-size;
     @include span-columns(12);
-    padding-bottom:1.4em;
+    padding-bottom:2em;
+    font-weight:bold;
   }
 
   .recent-post {
@@ -110,33 +102,42 @@ section#recent-posts {
     @include display(flex);
     @include flex-direction(column);
     @include justify-content(space-between);
-    min-height:200px;
+    min-height:270px;
 
     h1 {
-      font-size:1.7em;
+      font-size:$regular-font-size;
+      font-weight:bold;
       padding-bottom:1em;
     }
 
     p {
-      font-size:1.2em;
+      font-size:$detail-font-size;
       padding-bottom:1em;
     }
 
     a {
-      font-size:1.2em;
+      font-size:$detail-font-size;
       line-height:1.7em;
     }
   }
 }
 
 footer {
-  padding:10vh 0;
+  padding:8vh 0;
   background-color:#f6d860;
   color:white;
 
   section {
-    font-size:1.2em;
+    font-size:$detail-font-size;
     @include span-columns(2);
+    
+    h1 {
+      line-height:2em;
+    }
+
+    li {
+      line-height:2em;
+    }
   }
 }
 
