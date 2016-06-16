@@ -12,6 +12,7 @@ $first-color:#f4696b;
 $second-color:#64D5e1;
 $third-color:#fd9372;
 $fourth-color:#f6d860;
+$blog-accent-color:$first-color;
 
 body {
   font-family:'concourse_t3';
@@ -153,7 +154,42 @@ footer {
   background-repeat:no-repeat, repeat-x;
   @include background-image(linear-gradient(to bottom, $first-color 0%, $first-color 25%, $second-color 25%, $second-color 50%, $third-color 50%, $third-color 75%, $fourth-color 75%, $fourth-color 100%));
 
+  a {
+    text-decoration:none;
+    color:$blog-accent-color;
+    background-size:auto 200%;
+    transition:background-position 0.5s, color 0.3s;
+    @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, $blog-accent-color 50%, $blog-accent-color 100%));
+    &:hover {
+      background-position:100% 100%;
+      color:white;
+    }
+  }
+
   h1:first-child {
-    padding-top:8em;
+    font-size:6em;
+    font-weight:bold;
+    padding-top:1.8em;
+    margin-bottom:0.3em;
+  }
+
+  .single-article-listing {
+    padding:2.4em 0;
+    border-bottom:1px dashed $blog-accent-color;
+
+    h2 {
+      font-size:$regular-font-size;
+    }
+
+    p {
+      font-size:$detail-font-size;
+      padding-top:$regular-line-height;
+      line-height:$regular-line-height;
+
+      &.date {
+        padding:0.2em 0;
+        font-style:italic;
+      }
+    }
   }
 }
