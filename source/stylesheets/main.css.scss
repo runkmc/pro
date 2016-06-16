@@ -166,6 +166,17 @@ footer {
     }
   }
 
+  p {
+    font-size:$detail-font-size;
+    padding-top:$regular-line-height;
+    line-height:$regular-line-height;
+
+    &.date {
+      padding:0.2em 0;
+      font-style:italic;
+    }
+  }
+
   h1:first-child {
     font-size:6em;
     font-weight:bold;
@@ -180,15 +191,32 @@ footer {
     h2 {
       font-size:$regular-font-size;
     }
+  }
 
-    p {
-      font-size:$detail-font-size;
-      padding-top:$regular-line-height;
-      line-height:$regular-line-height;
+  #individual-post {
+    h1 {
+      @include shift(1);
+      @include span-columns(10);
+      padding-top:6em;
+      font-size:$regular-font-size;
+    }
+    
+    p.date {
+      @include shift(1);
+      @include span-columns(10);
+    }
 
-      &.date {
-        padding:0.2em 0;
-        font-style:italic;
+    #post-body {
+      
+      p {
+        @include shift(2);
+        @include span-columns(8);
+        line-height:1.45em;
+      }
+
+      pre {
+        @include shift(1);
+        @include span-columns(10);
       }
     }
   }

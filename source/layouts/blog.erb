@@ -1,9 +1,13 @@
 <% wrap_layout :layout do %>
   <div id="blog-wrapper">
     <div class="container">
-      <div id="individual-post">
-        <%= yield %>
-      </div>
+      <article id="individual-post">
+        <h1><%= current_article.title %></h1>
+        <p class="date"><%= current_article.date.strftime "%A, %B %-d, %Y A.D." %></p>
+        <div id="post-body">
+          <%= yield %>
+        </div>
+      </article>
     </div>
   </div>
 <% end %>
