@@ -115,6 +115,14 @@ section#recent-posts {
       font-size:$regular-font-size;
       font-weight:bold;
       padding-bottom:1em;
+      
+      a {
+        color:white;
+        transition:color 0.3s, background-position 0.5s;
+        &:hover {
+          color:black;
+        }
+      }
     }
 
     p {
@@ -123,8 +131,9 @@ section#recent-posts {
       padding-bottom:1em;
     }
 
-    a {
+    p.read-more {
       font-size:$detail-font-size;
+      display:block;
       line-height:1.7em;
     }
   }

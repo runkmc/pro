@@ -30,10 +30,10 @@
     <% blog.articles[0..2].each do |article| %>
     <div class="recent-post">
       <div class="post-content">
-        <h1><%= article.title %></h1>
+        <h1><%= link_to article.title, article %></h1>
         <p><%= strip_tags article.summary %></p>
       </div>
-      <%= link_to "Read more -&gt;", article %>
+      <p class="read-more"><%= link_to "Read more -&gt;", article %></p>
     </div>
   <% end %>
   </div>
