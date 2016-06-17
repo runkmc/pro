@@ -2,6 +2,7 @@
 @import 'webfonts';
 @import 'bourbon/bourbon';
 @import 'neat/neat';
+@import 'solarized-light';
 
 $max-width:66em;
 $regular-font-size:1.9em;
@@ -182,9 +183,12 @@ footer {
     font-weight:bold;
     padding-top:1.8em;
     margin-bottom:0.3em;
+    @include shift(1);
   }
 
   .single-article-listing {
+    @include shift(1);
+    @include span-columns(10);
     padding:2.4em 0;
     border-bottom:1px dashed $blog-accent-color;
 
@@ -197,8 +201,15 @@ footer {
     h1 {
       @include shift(1);
       @include span-columns(10);
-      padding-top:6em;
       font-size:$regular-font-size;
+    }
+
+    code {
+      font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+      font-size:0.88em;
+      background-color:#fdf6e3;
+      color:#586e75;
+      padding:0.2em;
     }
     
     p.date {
@@ -213,8 +224,27 @@ footer {
         line-height:1.45em;
       }
 
-      pre {
-        @include shift(-1);
+      ul {
+        line-height:1.45em;
+        font-size:$detail-font-size;
+        list-style-type:square;
+        list-style-position:outside;
+        padding-top:$regular-line-height;
+      }
+
+      h2 {
+        font-size:$regular-font-size;
+      }
+
+      div.highlight {
+        font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+        @include shift(-2);
+        padding:1.2em 0;
+        margin-top:1.2em;
+
+        .lineno {
+          padding:0 1em;
+        }
       }
     }
   }
