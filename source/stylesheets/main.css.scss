@@ -57,6 +57,10 @@ section#work {
   background-color:$second-color;
   color:white;
 
+  p {
+    margin-bottom:1em;
+  }
+
   #worktext {
     @include span-columns(5);
     font-size:$regular-font-size;
@@ -150,10 +154,11 @@ footer {
     
     h1 {
       line-height:2em;
+      padding-bottom:0.5em;
     }
 
     li {
-      line-height:2em;
+      line-height:1.7em;
     }
   }
 }
