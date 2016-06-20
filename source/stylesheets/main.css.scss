@@ -209,6 +209,10 @@ footer {
     h2 {
       font-size:$regular-font-size;
     }
+
+    &:last-child {
+      border-bottom:none;
+    }
   }
 
   #individual-post {
@@ -232,6 +236,7 @@ footer {
     }
 
     #post-body {
+      margin-bottom:3.4em;
       @include shift(2);
       @include span-columns(8);
       p {
