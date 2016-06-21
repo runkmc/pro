@@ -10,10 +10,10 @@ $regular-line-height:1.3em;
 $detail-font-size:1.25em;
 
 $first-color:#f4696b;
-$second-color:#64D5e1;
-$third-color:#fd9372;
-$fourth-color:#f6d860;
-$blog-accent-color:$first-color;
+$second-color:#fd9372;
+$third-color:#64d5e1;
+$fourth-color:#3c6997;
+$blog-accent-color:$fourth-color;
 
 body {
   font-family:'concourse_t3';
@@ -151,6 +151,10 @@ footer {
   section {
     font-size:$detail-font-size;
     @include span-columns(2);
+    
+    &#tags {
+      @include span-columns(6);
+    }
     
     h1 {
       line-height:2em;
