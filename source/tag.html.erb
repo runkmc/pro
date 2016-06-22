@@ -2,24 +2,30 @@
 pageable: true
 per_page: 12
 ---
-<h1>Articles tagged '<%= tagname %>'</h1>
+<div id="blog-wrapper">
+  <div class="container">
+    <h2 id="tag-title">Articles tagged '<%= tagname %>'</h2>
 
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<ul>
-  <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
-
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+    <% page_articles.each_with_index do |article, i| %>
+      <div class="single-article-listing">
+        <h2><%= link_to article.title, article %></h2> 
+        <p class="date"><%= article.date.strftime('%A, %B %-d, %Y A.D.') %></p>
+        <% tags = article.tags.map do |tag| %>
+          <% link_to tag, tag_path(tag) %>
+        <% end %>
+        <p class="summary"><%= strip_tags(article.summary) %>&hellip; <span class="tagline post-tags">Tagged with <%= tags.collect{|t| link_to(t, "/tags/#{t}.html")}.to_sentence %></span>.</p>
+      </div>
+    <% end %>
+    <% if paginate && num_pages > 1 %>
+      <p>Page <%= page_number %> of <%= num_pages %></p>
+      <% if prev_page %>
+        <p><%= link_to 'Previous page', prev_page %></p>
+      <% end %>
+    <% end %>
+    <% if paginate %>
+      <% if next_page %>
+        <p><%= link_to 'Next page', next_page %></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>

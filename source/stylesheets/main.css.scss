@@ -204,6 +204,14 @@ footer {
     @include shift(1);
   }
 
+  h2#tag-title {
+    font-size:3em;
+    font-weight:bold;
+    padding-top:3.6em;
+    margin-bottom:0.6em;
+    @include shift(1);
+  }
+
   .single-article-listing {
     @include shift(1);
     @include span-columns(10);
