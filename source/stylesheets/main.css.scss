@@ -45,7 +45,7 @@ header.index {
     font-size:$regular-font-size;
     line-height:$regular-line-height;
     @include span-columns(9);
-    @media(max-width:650px) {
+    @media(max-width:800px) {
       @include span-columns(12);
     }
   }
@@ -60,6 +60,9 @@ section#work {
   padding:10vh 0;
   background-color:$second-color;
   color:white;
+  @media(max-width:800px) {
+    padding:20vh 0;
+  }
 
   p {
     margin-bottom:1em;
@@ -69,6 +72,9 @@ section#work {
     @include span-columns(5);
     font-size:$regular-font-size;
     line-height:$regular-line-height;
+    @media(max-width:800px) {
+      @include span-columns(12);
+    }
   }
 
   ul#iphone-images {
@@ -77,11 +83,17 @@ section#work {
     @include perspective(1500px);
     @include transform-style(preserve-3d);
     box-sizing:border-box;
+    @media(max-width:800px) {
+      display:none;
+    }
 
     li {
       display:inline-block;
       width:7.4em;
       margin-right:-2em;
+      @media(max-width:1000px) {
+        width:6.5em;
+      }
 
       &:not(:first-child) {
       margin-left:-2em;
@@ -110,6 +122,9 @@ section#recent-posts {
     @include span-columns(12);
     padding-bottom:2em;
     font-weight:bold;
+    @media(max-width:800px) {
+      padding-bottom:0.5em;
+    }
   }
 
   .recent-post {
@@ -118,6 +133,16 @@ section#recent-posts {
     @include flex-direction(column);
     @include justify-content(space-between);
     min-height:270px;
+    @media(max-width:800px) {
+      @include span-columns(12);
+      min-height:0;
+      padding-bottom:0.6em;
+      padding-top:2em;
+      border-bottom:1px dashed white;
+      &:last-child {
+        border-bottom:none;
+      }
+    }
 
     h1 {
       font-size:$detail-font-size;
@@ -155,9 +180,17 @@ footer {
   section {
     font-size:$detail-font-size;
     @include span-columns(2);
+    @media(max-width:620px) {
+      @include span-columns(4);
+      margin-right:0 !important;
+    }
     
     &#tags {
       @include span-columns(6);
+      @media(max-width:620px) {
+        @include span-columns(12);
+        padding-top:1em;
+      }
     }
     
     h1 {
