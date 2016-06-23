@@ -32,6 +32,7 @@ a {
 }
 
 .container {
+  padding:0 1em;
   @include outer-container;
 }
 
@@ -44,6 +45,9 @@ header.index {
     font-size:$regular-font-size;
     line-height:$regular-line-height;
     @include span-columns(9);
+    @media(max-width:650px) {
+      @include span-columns(12);
+    }
   }
 
   p {
