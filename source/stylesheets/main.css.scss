@@ -288,6 +288,11 @@ footer {
       margin-bottom:3.4em;
       @include shift(2);
       @include span-columns(8);
+      @media(max-width:700px) {
+        @include shift(1);
+        @include span-columns(10);
+      }
+
       p {
         line-height:1.45em;
       }
@@ -309,6 +314,9 @@ footer {
         @include shift(-2);
         padding:1.2em 0;
         margin-top:1.2em;
+        @media(max-width:700px) {
+          @include shift(0);
+        }
 
         .lineno {
           padding:0 1em;
