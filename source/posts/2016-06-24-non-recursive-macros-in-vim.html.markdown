@@ -1,6 +1,6 @@
 ---
 title: Non-Recursive Macros in Vim
-date: '2016-06-25'
+date: '2016-06-24'
 tags: the young person's guide to vim
 ---
 
