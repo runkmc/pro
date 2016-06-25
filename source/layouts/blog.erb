@@ -7,6 +7,7 @@
         <p class="date"><%= current_article.date.strftime "%A, %B %-d, %Y A.D." %></p>
         <div id="post-body">
           <%= yield %>
+          <p class="article-tags">This article was tagged with <%= current_page.tags.collect{ |t| link_to(t, "/tags/#{t.gsub(/\W/, '-').downcase}.html") }.to_sentence %>. If you have any comments or questions, let Kevin know <a href="http://twitter.com/run_kmc">@run_kmc.</a></p>
         </div>
       </article>
     </div>
