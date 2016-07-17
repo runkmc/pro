@@ -115,7 +115,7 @@ section#work {
 section#recent-posts {
   background-color:$third-color;
   color:white;
-  padding:7vh 0;
+  padding:5vh 0;
 
   & > .container > h1 {
     font-size:$regular-font-size;
@@ -132,7 +132,7 @@ section#recent-posts {
     @include display(flex);
     @include flex-direction(column);
     @include justify-content(space-between);
-    min-height:270px;
+    min-height:200px;
     @media(max-width:800px) {
       @include span-columns(12);
       min-height:0;
