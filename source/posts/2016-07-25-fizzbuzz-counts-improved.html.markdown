@@ -8,7 +8,8 @@ tagline: I took a good thing and made it better. Or worse. Still hard to tell.
 I improved the fizzbuzz solution in scheme from my <a href="/2016/07/17/fizzbuzz-counts.html">previous post</a>. I mentioned
 that if I added a second function inside of the main function, I could avoid
 passing in the `n` argument over and over again. I don't know if it's a change
-for the better but it's definitely.. uh...  different.
+for the better but it's definitely.. uh...  different. If nothing else, this
+code serves as a good lesson in why names are important.
 
 ~~~scheme
 (define fizzbuzz
