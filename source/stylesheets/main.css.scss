@@ -264,6 +264,12 @@ footer {
     }
   }
 
+  div#pages {
+    @include shift(1);
+    @include span-columns(10);
+    padding-bottom:2.5em;
+  }
+
   #individual-post {
     h1 {
       @include shift(1);
