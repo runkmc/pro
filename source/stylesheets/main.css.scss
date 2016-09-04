@@ -30,6 +30,7 @@ body {
   margin-top:10vh;
   @media(max-width:620px) {
     @include span-columns(10);
+    font-size:1.1em;
   }
    
   h1 {
