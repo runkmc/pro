@@ -37,6 +37,7 @@ body {
     margin-bottom:1em;
     font-family:'concourse_t7';
     font-weight:normal;
+    @include shift(2);
   }
 
   #links {
