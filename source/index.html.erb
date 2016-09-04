@@ -1,42 +1,22 @@
-<header class="index">
-  <div class="container">
-    <div id="intro">
-      <p>Hi. I'm Kevin McGladdery.</p>
-      <p>I'm an independent developer in California. I currently work mostly in Swift, but I also love Ruby, Elixir, Haskell, and all sorts of LISPs.</p>
-      <p>I'm the host of the <a href="http://buildingprogrammers.audio">Building Programmers</a> podcast, which can also be found on <a href="https://itunes.apple.com/us/podcast/building-programmers/id1149043456">iTunes</a>.</p>
-      <p>I <a href="/blog">blog</a> about Swift, Vim, logic, and programming in general.</p>
-      <p>I'd love to work with you on your idea. <a href="#">Contact me</a> and let's make something great.</p>
+<div class="container">
+  <div id="home">
+    <h1>Kevin McGladdery</h1>
+    <div id="links">
+      <ol>
+        <li><a href="https://itunes.apple.com/us/podcast/building-programmers/id1149043456">building programmers(itunes)</a></li>
+        <li><a href="http://buildingprogrammers.audio">building programmers(website)</a></li>
+        <li><a href="https://github.com/runkmc">Github</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="https://twitter.com/run_kmc">Twitter</a></li>
+        <li><a href="http://appstore.com/kevinmcgladdery">AppStore</a></li>
+        <li><a href="https://www.flickr.com/photos/mcgladdery/">Flickr</a></li>
+        <li><a href="https://cocoapods.org/owners/9401">Cocoapods</a></li>
+        <li><a href="https://rubygems.org/profiles/runkmc">Rubygems</a></li>
+        <li><a href="http://linkedin.com/in/kevinmcgladdery">LinkedIn</a></li>
+        <li><a href="http://kevinmcgladdery.com">Choral Music</a></li>
+        <li><a href="https://soundcloud.com/run_kmc">Soundcloud</a></li>
+        <li><a href="http://contrapunctus.io">Contrapunctus</a></li>
+      </ol>
     </div>
   </div>
-</header>
-
-<section id="work">
-  <div class="container">
-    <ul id="iphone-images">
-      <li><img src="images/filmstock_iphone.png" alt=""></li>
-      <li><img src="images/earthquakr_iphone.png" alt=""></li>
-      <li><img src="images/neos_iphone.png" alt=""></li>
-      <li><img src="images/feedings_iphone.png" alt=""></li>
-    </ul>
-    <div id="worktext">
-      <p>I take ideas and I turn them into beautiful, engaging iOS apps. You can see all of my personal apps in the <a href="http://appstore.com/kevinmcgladdery">Appstore</a> and on <a href="https://github.com/runkmc">Github</a>.</p>
-      <p>I've also written multiple open source libraries in Swift and Ruby. You can see them on <a href="https://rubygems.org/profiles/runkmc">Rubygems</a>, <a href="https://cocoapods.org/owners/9401">Cocoapods</a>, and on <a href="https://github.com/runkmc">Github</a>.</p>
-    </div>
-  </div>
-</section>
-
-<section id="recent-posts">
-  <div class="container">
-    <h1>Recent Posts</h1>
-    <% blog.articles[0..2].each do |article| %>
-    <div class="recent-post">
-      <div class="post-content">
-        <h1><%= link_to article.title, article %></h1>
-        <% summary = article.data.tagline || article.summary %>
-        <p><%= strip_tags summary %></p>
-      </div>
-      <p class="read-more"><%= link_to "Read more -&gt;", article %></p>
-    </div>
-  <% end %>
-  </div>
-</section>
+</div>

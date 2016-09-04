@@ -16,52 +16,6 @@
 
     <div id="main" role="main">
       <%= yield %>
-      <footer>
-        <div class="container">
-          <section id="codelinks">
-            <h1>Code</h1>
-            <ul>
-              <li><a href="https://github.com/runkmc">Github</a></li>
-              <li><a href="https://cocoapods.org/owners/9401">Cocoapods</a></li>
-              <li><a href="https://rubygems.org/profiles/runkmc">Rubygems</a></li>
-            </ul>
-          </section>
-          <section id="Social">
-            <h1>Social</h1>
-            <ul>
-              <li><a href="https://twitter.com/run_kmc">Twitter</a></li>
-              <li><a href="https://www.flickr.com/photos/mcgladdery/">Flickr</a></li>
-              <li><a href="https://soundcloud.com/run_kmc">Soundcloud</a></li>
-            </ul>
-          </section>
-          <section id="other-links">
-            <h1>Other</h1>
-            <ul>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="http://appstore.com/kevinmcgladdery">AppStore</a></li>
-              <li><a href="http://linkedin.com/in/kevinmcgladdery">LinkedIn</a></li>
-              <li><a href="http://contrapunctus.io">Contrapunctus</a></li>
-              <li><a href="http://kevinmcgladdery.com">Choral Music</a></li>
-            </ul>
-          </section>
-          <section id="tags">
-            <h1>Tags</h1>
-            <ul>
-              <% top_tags = ["the young person's guide to vim", "programming", "swift", "clojure", "the island of knights and knaves"] %>
-              <% tags_filter = Proc.new { |key, value| top_tags.include? key} %>
-
-              <% my_tags = blog.tags.keep_if &tags_filter %>
-              <% my_tags.each do |tag, articles| %>
-                <li><%= link_to tag, tag_path(tag) %> - (<%= articles.size %>)</a></li>
-              <% end %>
-              <% rest_of_the_tags = blog.tags.delete_if &tags_filter %>
-              <% rest_of_the_tags.each do |tag, articles| %>
-                <li><%= link_to tag, tag_path(tag) %> - (<%= articles.size %>)</a></li>
-              <% end %>
-            </ul>
-          </section>
-        </div>
-      </footer>
     </div>
   </body>
 </html>

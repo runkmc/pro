@@ -17,159 +17,58 @@ $blog-accent-color:$fourth-color;
 
 body {
   font-family:'concourse_t3';
-  @include font-feature-settings("ss02");
+//  @include font-feature-settings("ss05");
 }
 
-a {
-  text-decoration:none;
-  color:black;
-  background-size:auto 200%;
-  transition:background-position 0.5s;
-  @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%));
-  &:hover {
-    background-position:100% 100%;
+#home {
+  text-transform:lowercase;
+  color:#F4564A;
+  font-size:1.35em;
+  font-weight:bold;
+  @include span-columns(8);
+  @include shift(1);
+  margin-top:10vh;
+  @media(max-width:620px) {
+    @include span-columns(10);
+  }
+   
+  h1 {
+    margin-bottom:1em;
+    font-family:'concourse_t7';
+    font-weight:normal;
+  }
+
+  #links {
+    background-color:#F4564A;
+    padding:6em 0;
+  }
+
+  ol {
+    list-style-type:none;
+    @include shift(2);
+  }
+
+  li {
+    margin:0.35em 0;
+  }
+
+  a {
+    padding:0.1em;
+    text-decoration:none;
+    color:white;
+    background-size:auto 200%;
+    transition:background-position 0.5s;
+    @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%));
+    &:hover {
+      background-position:100% 100%;
+      color:#F4564A;
+    }
   }
 }
 
 .container {
   padding:0 1em;
   @include outer-container;
-}
-
-header.index {
-  padding:20vh 0;
-  color:white;
-  background-color:$first-color;
-
-  #intro {
-    font-size:$regular-font-size;
-    line-height:$regular-line-height;
-    @include span-columns(9);
-    @media(max-width:800px) {
-      @include span-columns(12);
-    }
-  }
-
-  p {
-    margin-bottom:1em;
-  }
-
-}
-
-section#work {
-  padding:10vh 0;
-  background-color:$second-color;
-  color:white;
-  @media(max-width:800px) {
-    padding:20vh 0;
-  }
-
-  p {
-    margin-bottom:1em;
-  }
-
-  #worktext {
-    @include span-columns(5);
-    font-size:$regular-font-size;
-    line-height:$regular-line-height;
-    @media(max-width:800px) {
-      @include span-columns(12);
-    }
-  }
-
-  ul#iphone-images {
-    font-size:$regular-font-size;
-    @include span-columns(7);
-    @include perspective(1500px);
-    @include transform-style(preserve-3d);
-    box-sizing:border-box;
-    @media(max-width:800px) {
-      display:none;
-    }
-
-    li {
-      display:inline-block;
-      width:7.4em;
-      margin-right:-2em;
-      @media(max-width:1000px) {
-        width:6.5em;
-      }
-
-      &:not(:first-child) {
-      margin-left:-2em;
-    }
-  }
-    
-    img {
-      @include transform(rotateY(30deg));
-      transition:transform 0.5s;
-      width:100%;
-      &:hover {
-        @include transform(rotateY(18deg));
-        @include transform(translateZ(100px));
-      }
-    }
-  }
-}
-
-section#recent-posts {
-  background-color:$third-color;
-  color:white;
-  padding:5vh 0;
-
-  & > .container > h1 {
-    font-size:$regular-font-size;
-    @include span-columns(12);
-    padding-bottom:2em;
-    font-weight:bold;
-    @media(max-width:800px) {
-      padding-bottom:0.5em;
-    }
-  }
-
-  .recent-post {
-    @include span-columns(4);
-    @include display(flex);
-    @include flex-direction(column);
-    @include justify-content(space-between);
-    min-height:200px;
-    @media(max-width:800px) {
-      @include span-columns(12);
-      min-height:0;
-      padding-bottom:0.6em;
-      padding-top:2em;
-      border-bottom:1px dashed white;
-      &:last-child {
-        border-bottom:none;
-      }
-    }
-
-    h1 {
-      font-size:$detail-font-size;
-      font-weight:bold;
-      padding-bottom:1em;
-      
-      a {
-        color:white;
-        transition:color 0.3s, background-position 0.5s;
-        &:hover {
-          color:black;
-        }
-      }
-    }
-
-    p {
-      font-size:$detail-font-size;
-      line-height:1.2em;
-      padding-bottom:1em;
-    }
-
-    p.read-more {
-      font-size:$detail-font-size;
-      display:block;
-      line-height:1.7em;
-    }
-  }
 }
 
 footer {
