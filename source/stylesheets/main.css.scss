@@ -76,6 +76,18 @@ footer {
   background-color:$fourth-color;
   color:white;
 
+  a {
+    padding:0.1em;
+    text-decoration:none;
+    color:black;
+    background-size:auto 200%;
+    transition:background-position 0.5s;
+    @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%));
+    &:hover {
+      background-position:100% 100%;
+    }
+  }
+
   section {
     font-size:$detail-font-size;
     @include span-columns(2);
