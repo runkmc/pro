@@ -100,7 +100,7 @@ footer {
     }
 
     &#other-links {
-      @include shift(2);
+      @include shift(1);
       @include span-columns(3);
       @media(max-width:620px) {
         @include span-columns(10);
