@@ -32,7 +32,7 @@ body {
     @include span-columns(10);
     font-size:1.1em;
   }
-   
+
   h1 {
     margin-bottom:1em;
     font-family:'concourse_t7';
@@ -76,6 +76,9 @@ footer {
   padding:8vh 0;
   background-color:$fourth-color;
   color:white;
+  @media(max-width:620px) {
+    padding-top:1.5em;
+  }
 
   a {
     padding:0.1em;
@@ -91,20 +94,30 @@ footer {
 
   section {
     font-size:$detail-font-size;
-    @include span-columns(2);
     @media(max-width:620px) {
       @include span-columns(4);
       margin-right:0 !important;
     }
-    
-    &#tags {
-      @include span-columns(6);
+
+    &#other-links {
+      @include shift(2);
+      @include span-columns(3);
       @media(max-width:620px) {
-        @include span-columns(12);
+        @include span-columns(10);
+        @include shift(1);
         padding-top:1em;
       }
     }
-    
+
+    &#tags {
+      @include span-columns(5);
+      @media(max-width:620px) {
+        @include span-columns(10);
+        @include shift(1);
+        padding-top:1em;
+      }
+    }
+
     h1 {
       line-height:2em;
       padding-bottom:0.5em;
@@ -196,7 +209,7 @@ footer {
       color:#586e75;
       padding:0.2em;
     }
-    
+
     p.date {
       @include shift(1);
       @include span-columns(10);
